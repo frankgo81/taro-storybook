@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "main": "index.js",
   "scripts": {
-    "storybook": "cross-env start-storybook"
+    "sb": "cross-env start-storybook"
   },
   "devDependencies": {
     "@storybook/addon-actions": "6.4.0",
