@@ -17,8 +17,8 @@ export const Base = (props: ButtonProps) => {
   //   color: '#fff',
   // };
   return (
-    <Button {...props} className="b">
-      <Text className="t">{Base.args.children}</Text>
+    <Button className='btn'  {...props}>
+      <Text className='txt'>{Base.args.children}</Text>
     </Button>
   );
 };
