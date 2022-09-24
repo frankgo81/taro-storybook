@@ -5,7 +5,8 @@ import { Button, ButtonProps, Text } from '@tarojs/components';
 import { Children, CSSProperties, PropsWithChildren } from 'react';
 import './button.scss';
 import PropTypes from 'prop-types';
-import { buttonTypes, buttonVariants, buttonSizes } from './constants';
+import { buttonVariants, buttonSizes } from './constants';
+import classnames from 'classnames';
 
 interface IFccButtonProps extends ButtonProps {
   text: string;
@@ -20,14 +21,13 @@ interface IFccButtonProps extends ButtonProps {
 
 const FccButton = (props: IFccButtonProps) => {
   const { variant, size, onClick, text, isDisabled, backgroundColor, textColor, shadow, startIcon, endIcon } = props;
-
   const shadows = shadow ? 'shadow' : '';
   const disabled = isDisabled ? 'disabled' : '';
 
   return (
     <Button
       onClick={onClick}
-      className={[
+      className={classnames(
         'button',
         `${size}`,
         `button__${variant}`,
@@ -35,15 +35,12 @@ const FccButton = (props: IFccButtonProps) => {
         `${disabled}`,
         `bg-${backgroundColor}`,
         `text-${textColor}`,
-      ].join(' ')}
+      )}
       disabled={isDisabled}
       {...props}
     >
       {startIcon && <span className="material-icons icon-start">local_grocery_store</span>}
-      <Text className={[
-        'text',
-        `text__${variant}`,
-      ].join(' ')}>{text}</Text>
+      <Text className={classnames('text', `text__${variant}`)}>{text}</Text>
       {endIcon && <span className="material-icons icon-end">local_grocery_store</span>}
     </Button>
   );
@@ -52,7 +49,6 @@ const FccButton = (props: IFccButtonProps) => {
 FccButton.propTypes = {
   text: PropTypes.string,
   isDisabled: PropTypes.bool,
-  type: PropTypes.oneOf([buttonTypes.outline, buttonTypes.filled, buttonTypes.text]),
   variant: PropTypes.oneOf([buttonVariants.oval, buttonVariants.rectangular]),
   size: PropTypes.oneOf([buttonSizes.small, buttonSizes.medium, buttonSizes.large]),
   backgroundColor: PropTypes.string,

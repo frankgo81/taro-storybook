@@ -1,16 +1,17 @@
-export const buttonTypes = {
-  outline: 'outline',
-  filled: 'filled',
-  text: 'text',
-};
 
 export const buttonVariants = {
   primary: 'primary',
   secondary: 'secondary',
+  outline: 'outline',
+};
+
+export const buttonStates = {
+  pressed: 'pressed',
+  active: 'active',
+  disabled: 'disabled',
 };
 
 export const buttonSizes = {
-  small: 'small',
-  medium: 'medium',
-  large: 'large',
+  full: 'full',
+  half: 'half',
 };

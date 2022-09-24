@@ -1968,6 +1968,7 @@ __metadata:
     "@tarojs/webpack-runner": 3.3.15
     "@types/react": ^17.0.37
     babel-preset-taro: 3.3.15
+    classnames: ^2.3.2
     cross-env: ^7.0.3
     eslint-config-taro: 3.3.15
     postcss: ^8.4.4
@@ -7629,6 +7630,13 @@ __metadata:
   version: 2.3.1
   resolution: "classnames@npm:2.3.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fclassnames%2Fdownload%2Fclassnames-2.3.1.tgz"
   checksum: 14db8889d56c267a591f08b0834989fe542d47fac659af5a539e110cc4266694e8de86e4e3bbd271157dbd831361310a8293e0167141e80b0f03a0f175c80960
+  languageName: node
+  linkType: hard
+
+"classnames@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "classnames@npm:2.3.2"
+  checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
   languageName: node
   linkType: hard
 
